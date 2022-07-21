@@ -52,12 +52,12 @@ alias ww+="cd ~/dev/\$1" # This will take you to "~/dev/" when used w\o argument
 ### git COMMANDS ###
 alias ggs="git status"
 alias gga="git add \$@"
-alias ggc="git commit -m \$1"
+alias ggc="git commit -m \$1" # if you sign your commits then add "-S" option to this alias
 alias ggl="git log --oneline"
 alias ggb="git branch"
 alias ggck="git checkout \$1"
 alias ggckb="git checkout -b \$1"
-alias ggp="git pull"
+alias ggpl="git pull"
 alias ggr="git restore \$@"
 alias ggrm="git rm \$@"
 alias ggp="git push"
