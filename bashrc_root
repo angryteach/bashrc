@@ -1,0 +1,40 @@
+# /etc/skel/.bashrc
+#
+# This file is sourced by all *interactive* bash shells on startup,
+# including some apparently interactive shells such as scp and rcp
+# that can't tolerate any output.  So make sure this doesn't display
+# anything or bad things will happen !
+
+
+# Test for an interactive shell.  There is no need to set anything
+# past this point for scp and rcp, and it's important to refrain from
+# outputting anything in those cases.
+if [[ $- != *i* ]] ; then
+	# Shell is non-interactive.  Be done now!
+	return
+fi
+
+
+# Put your fun stuff here.
+alias e="exit"
+alias c="clear"
+
+#Emerge aliases
+alias ,update="emerge -vuND @world" # remember that you may add extra options to alias: ",update -p" to see updates without actually updating
+alias ,updatefetch="emerge -vuND --fetchonly @world"
+alias ,updatelog="emerge -pvuND @world > /root/log-emerge/"`date +"%Y%m%d_%H%M"`"-update.log" # make sure /root/log-emerge exists
+alias ,depclean="emerge --depclean $@"
+alias ,depcleanlog="emerge -p --depclean $@ > /root/log-emerge/"`date +"%Y%m%d_%H%M"`"-depclean.log"
+alias ,search="emerge -s $1"
+alias ,install="emerge -v $@"
+alias ,installfetch="emerge -v --fetchonly $@"
+alias ,installlog="emerge -pv $@ > /root/log-emerge/"`date +"%Y%m%d_%H%M"`"-install.log"
+alias ,remove="emerge -C $@"
+alias ,removelog="emerge -pC $@ > /root/log-emerge/"`date +"%Y%m%d_%H%M"`"-remove.log"
+alias ,sync="emerge --sync"
+alias ,fetch="$@ --fetchonly"
+
+#my local variables
+alias conf="vim /etc/portage/make.conf"
+alias b="vim /root/.bashrc"
+alias v="vim"
