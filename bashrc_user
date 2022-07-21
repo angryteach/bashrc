@@ -35,3 +35,8 @@ alias t="tmux" # should be installed on the system
 #alias tmn="tmux new-session -A -s $1"
 #alias ta="tmux attach -t MyDev || tmux attach"
 alias v="vim" # should be installed on the system
+
+# Accessing files and paths
+alias b="vim ~/.bashrc"
+alias sb="source ~/.bashrc"
+alias dev="cd ~/Desktop/dev"
