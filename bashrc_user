@@ -18,8 +18,9 @@ fi
 
 
 # Put your fun stuff here.
+## Change aliases per your requirement ##
 
-# Tools shortcuts
+### BASIC SHORTCUTS ###
 
 alias cdd="cd .."
 alias e="exit"
@@ -29,14 +30,20 @@ alias ll="ls -la"
 alias lll="ls -al | less"
 alias lc="ls --classify"
 alias r="ranger" # should be installed on the system
-alias t="tmux" # should be installed on the system
+alias t="tmux" # should be installed on the system ## NOTE: alias could be used with options: "t new-session -A -s MyDev"
 #NOTE: could expose extra options such as:
 #alias tn="tmux new-session -A -s MyDev"
 #alias tmn="tmux new-session -A -s $1"
 #alias ta="tmux attach -t MyDev || tmux attach"
 alias v="vim" # should be installed on the system
+alias y="yt-dlp" # should be installed on the system
 
-# Accessing files and paths
+### ACCESSING FILES AND PATHS ###
 alias b="vim ~/.bashrc"
+alias cb="cat ~/.bashrc"
 alias sb="source ~/.bashrc"
 alias dev="cd ~/Desktop/dev"
+
+## Functions ##
+alias www+="cd ~/Desktop/dev/web/www/localhost/\$1" # This will change to "~/Desktop/dev/web/www/localhost/" and if "myproj" is used as an argument then it will change directory to "~/Desktop/dev/web/www/localhost/myproj" if the folder exists.
+
