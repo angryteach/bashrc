@@ -61,3 +61,5 @@ alias ggpl="git pull"
 alias ggr="git restore \$@"
 alias ggrm="git rm \$@"
 alias ggp="git push"
+## NOTE: if you need to sign your commits, add the following line to your .bashrc file:
+#export GPG_TTY=$(tty) ## remove the leading # to enable
