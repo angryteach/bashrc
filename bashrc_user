@@ -18,9 +18,11 @@ fi
 
 
 # Put your fun stuff here.
-## Change aliases per your requirement ##
+## Change aliases per your requirements ##
 
 ### BASIC SHORTCUTS ###
+
+set -o vi # very useful if you are familiar with Vi(m), just look it up
 
 alias cdd="cd .."
 alias e="exit"
@@ -41,9 +43,21 @@ alias y="yt-dlp" # should be installed on the system
 ### ACCESSING FILES AND PATHS ###
 alias b="vim ~/.bashrc"
 alias cb="cat ~/.bashrc"
-alias sb="source ~/.bashrc"
-alias dev="cd ~/Desktop/dev"
+alias sb="source ~/.bashrc" # Use this to apply changes to .bashrc or simply close and then open terminal again
+alias dev="cd ~/dev"
 
 ## Functions ##
-alias www+="cd ~/Desktop/dev/web/www/localhost/\$1" # This will change to "~/Desktop/dev/web/www/localhost/" and if "myproj" is used as an argument then it will change directory to "~/Desktop/dev/web/www/localhost/myproj" if the folder exists.
+alias ww+="cd ~/dev/\$1" # This will take you to "~/dev/" when used w\o arguments and to "~/dev/existingfolder" if "existingfolder" is used as an argument
 
+### git COMMANDS ###
+alias ggs="git status"
+alias gga="git add \$@"
+alias ggc="git commit -m \$1"
+alias ggl="git log --oneline"
+alias ggb="git branch"
+alias ggck="git checkout \$1"
+alias ggckb="git checkout -b \$1"
+alias ggp="git pull"
+alias ggr="git restore \$@"
+alias ggrm="git rm \$@"
+alias ggp="git push"
