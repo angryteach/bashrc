@@ -32,9 +32,10 @@ alias ,installlog="emerge -pv $@ > /root/log-emerge/"`date +"%Y%m%d_%H%M"`"-inst
 alias ,remove="emerge -C $@"
 alias ,removelog="emerge -pC $@ > /root/log-emerge/"`date +"%Y%m%d_%H%M"`"-remove.log"
 alias ,sync="emerge --sync"
-alias ,fetch="$@ --fetchonly"
 
 #my local variables
-alias conf="vim /etc/portage/make.conf"
-alias b="vim /root/.bashrc"
+alias m="vim /etc/portage/make.conf"
+alias b="vim ~/.bashrc"
+alias cb="cat ~/.bashrc"
+alias sb="source ~/.bashrc" # Use this to apply changes to .bashrc or simply close and then open terminal again
 alias v="vim"

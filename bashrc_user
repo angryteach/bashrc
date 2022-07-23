@@ -34,7 +34,7 @@ alias lc="ls --classify"
 alias r="ranger" # should be installed on the system
 alias t="tmux" # should be installed on the system ## NOTE: alias could be used with options: "t new-session -A -s MyDev"
 #NOTE: could expose extra options such as:
-#alias tn="tmux new-session -A -s MyDev"
+#alias tn="tmux new-session -A -s MyDev" ## remove the leading # to enable
 #alias tmn="tmux new-session -A -s $1"
 #alias ta="tmux attach -t MyDev || tmux attach"
 alias v="vim" # should be installed on the system
